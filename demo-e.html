@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luminos Peptides — Demo E</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --gold: #b8962e;
+    --gold-light: #c4a23a;
+    --navy: #1a1a2e;
+    --dark: #2c2c2c;
+    --gray: #9a9a9a;
+    --bg: #e0e0e0;
+    --card-bg: #ffffff;
+  }
+  
+  body {
+    background: var(--bg);
+    font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--navy);
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  
+  .subtitle {
+    color: var(--gray);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 30px 20px 0;
+  }
+  
+  /* Vial image area */
+  .vial-wrap {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -60px;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.12));
+  }
+  
+  .vial-wrap img {
+    width: 180px;
+    height: auto;
+    display: block;
+  }
+  
+  /* White label card */
+  .label-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 80px 40px 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .brand-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  
+  .brand-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  
+  .brand-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.35em;
+    color: var(--dark);
+    text-transform: uppercase;
+  }
+  
+  .product-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 6px;
+    font-feature-settings: 'onum' 1;
+  }
+  
+  .product-dose {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: #555;
+    margin-bottom: 20px;
+    font-feature-settings: 'onum' 1;
+  }
+  
+  .gold-divider {
+    width: 85%;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 18px;
+  }
+  
+  .research-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .purity-spec {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  
+  .purity-value {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--gold);
+  }
+  
+  /* Footer */
+  .demo-footer {
+    margin-top: 60px;
+    text-align: center;
+    color: var(--gray);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  
+  .demo-footer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .product-name { font-size: 34px; }
+    .product-dose { font-size: 22px; }
+    .label-card { padding: 70px 30px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Luminos Peptides</h1>
+<p class="subtitle">Premium Research-Grade Compounds — Demo E</p>
+
+<div class="products-grid">
+
+  <!-- Weight Management -->
+  <div class="product-card">
+    <div class="vial-wrap">
+      <img src="https://litter.catbox.moe/sgqyz6.jpg" alt="Semaglutide vial">
+    </div>
+    <div class="label-card">
+      <div class="brand-line">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Luminos</span>
+      </div>
+      <div class="product-name">Semaglutide</div>
+      <div class="product-dose">5mg</div>
+      <div class="gold-divider"></div>
+      <div class="research-text">Research Use Only</div>
+      <div class="purity-spec">Purity ≥ 99%</div>
+      <div class="purity-value">≥ 99.2%</div>
+    </div>
+  </div>
+
+  <!-- Recovery -->
+  <div class="product-card">
+    <div class="vial-wrap">
+      <img src="https://litter.catbox.moe/sgqyz6.jpg" alt="BPC-157 vial">
+    </div>
+    <div class="label-card">
+      <div class="brand-line">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Luminos</span>
+      </div>
+      <div class="product-name">BPC-157</div>
+      <div class="product-dose">5mg</div>
+      <div class="gold-divider"></div>
+      <div class="research-text">Research Use Only</div>
+      <div class="purity-spec">Purity ≥ 99%</div>
+      <div class="purity-value">≥ 99.6%</div>
+    </div>
+  </div>
+
+  <!-- Cognitive -->
+  <div class="product-card">
+    <div class="vial-wrap">
+      <img src="https://litter.catbox.moe/sgqyz6.jpg" alt="Semax vial">
+    </div>
+    <div class="label-card">
+      <div class="brand-line">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Luminos</span>
+      </div>
+      <div class="product-name">Semax</div>
+      <div class="product-dose">10mg</div>
+      <div class="gold-divider"></div>
+      <div class="research-text">Research Use Only</div>
+      <div class="purity-spec">Purity ≥ 99%</div>
+      <div class="purity-value">≥ 99.4%</div>
+    </div>
+  </div>
+
+  <!-- Longevity -->
+  <div class="product-card">
+    <div class="vial-wrap">
+      <img src="https://litter.catbox.moe/sgqyz6.jpg" alt="NAD+ vial">
+    </div>
+    <div class="label-card">
+      <div class="brand-line">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Luminos</span>
+      </div>
+      <div class="product-name">NAD+</div>
+      <div class="product-dose">500mg</div>
+      <div class="gold-divider"></div>
+      <div class="research-text">Research Use Only</div>
+      <div class="purity-spec">Purity ≥ 99%</div>
+      <div class="purity-value">≥ 99.1%</div>
+    </div>
+  </div>
+
+  <!-- Sexual Health -->
+  <div class="product-card">
+    <div class="vial-wrap">
+      <img src="https://litter.catbox.moe/sgqyz6.jpg" alt="PT-141 vial">
+    </div>
+    <div class="label-card">
+      <div class="brand-line">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Luminos</span>
+      </div>
+      <div class="product-name">PT-141</div>
+      <div class="product-dose">10mg</div>
+      <div class="gold-divider"></div>
+      <div class="research-text">Research Use Only</div>
+      <div class="purity-spec">Purity ≥ 99%</div>
+      <div class="purity-value">≥ 99.5%</div>
+    </div>
+  </div>
+
+  <!-- Wellness -->
+  <div class="product-card">
+    <div class="vial-wrap">
+      <img src="https://litter.catbox.moe/sgqyz6.jpg" alt="Sermorelin vial">
+    </div>
+    <div class="label-card">
+      <div class="brand-line">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Luminos</span>
+      </div>
+      <div class="product-name">Sermorelin</div>
+      <div class="product-dose">5mg</div>
+      <div class="gold-divider"></div>
+      <div class="research-text">Research Use Only</div>
+      <div class="purity-spec">Purity ≥ 99%</div>
+      <div class="purity-value">≥ 99.3%</div>
+    </div>
+  </div>
+
+  <!-- Accessories -->
+  <div class="product-card">
+    <div class="vial-wrap">
+      <img src="https://litter.catbox.moe/sgqyz6.jpg" alt="BAC Water vial">
+    </div>
+    <div class="label-card">
+      <div class="brand-line">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Luminos</span>
+      </div>
+      <div class="product-name">BAC Water</div>
+      <div class="product-dose">10ml</div>
+      <div class="gold-divider"></div>
+      <div class="research-text">Research Use Only</div>
+      <div class="purity-spec">Bacteriostatic</div>
+      <div class="purity-value">Sterile</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="demo-footer">
+  <p>© 2026 Luminos Peptides — Demo E Product Cards</p>
+  <p>For research purposes only. <a href="https://luminospeptides.com">luminospeptides.com</a></p>
+</div>
+
+</body>
+</html>
